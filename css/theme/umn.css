@@ -292,3 +292,27 @@ body {
 
 .reveal small code {
   vertical-align: baseline; }
+
+.columns {
+  width: inherit;
+  height: inherit;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.columns .left {
+  float: left;
+  width: 60%;
+  height: inherit;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.columns .right {
+  float: right;
+  width: 40%;
+}
+
+.columns .left pre {
+  margin-top: 30%;
+}
