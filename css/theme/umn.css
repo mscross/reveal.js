@@ -144,10 +144,11 @@ body {
   display: block;
   padding: 5px;
   overflow: auto;
-  max-height: 400px;
+  max-height: 800px;
   word-wrap: normal;
   background: #3F3F3F;
-  color: #DCDCDC; }
+  color: #DCDCDC;
+  margin-left: -30px; }
 
 .reveal table {
   margin: auto;

@@ -362,14 +362,14 @@ ll_ax = tvfig.get_axis(5)
 ur_ax = tvfig.get_axis(0)
 
 tvfig.draw_bar(ll_ax, ur_ax, (11, 12.5),
-              facecolor='g', edgecolor='none',
-              alpha=0.2)
+              facecolor='g', alpha=0.2,
+              edgecolor='none')
 tvfig.draw_bar(ll_ax, ur_ax, (12.5, 14.5),
               facecolor='yellow',
               edgecolor='none', alpha=0.2)
 tvfig.draw_bar(ll_ax, ur_ax, (14.5, 17.5),
-              facecolor='g', edgecolor='none',
-              alpha=0.2)
+              facecolor='g', alpha=0.2,
+              edgecolor='none')
 
 tvfig.draw_bar(tvfig.axes[5][1],
                tvfig.axes[0][1],
@@ -391,14 +391,16 @@ tvfig.draw_bar(tvfig.axes[5][1],
 					<div class="columns">
 						<div class="left" style="width: 50%;">
 							<h2>Text</h2>
-							<pre><code data-trim contenteditable class='ruby'>
+							<pre style="margin-top:25%"><code data-trim contenteditable class='ruby'>
 tvfig.fig.axes[0].text(
     14, -8.5, 'Termination I', fontsize=14,
-    weight='bold', horizontalalignment='center')
+    weight='bold',
+    horizontalalignment='center')
 
 tvfig.fig.axes[1].text(
-    133.23, -8.5, 'Termination II', fontsize=14,
-    weight='bold', horizontalalignment='center')
+    133.23, -8.5, 'Termination II',
+    fontsize=14, weight='bold',
+    horizontalalignment='center')
 							</code></pre>
 						</div>
 
@@ -412,12 +414,15 @@ tvfig.fig.axes[1].text(
 					<div class="columns">
 						<div class="left" style="width: 50%;">
 							<h1>TrendVis:</h1>
-							<ul style="margin-top:20%;">
+							<ul style="margin-top:15%;">
 								<li>Reusable</li>
 								<li>Readable</li>
 								<li>Efficient!</li>
 							</ul>
-							<p style="margin-top:25%;"> and available on GitHub: <a href="https://github/mscross/trendvis">https://github/mscross/trendvis</a></p>
+							<p style="margin-top:20%;"> Available on GitHub and PyPi<br><a href="https://github/mscross/trendvis">https://github/mscross/trendvis</a></p>
+							<pre style="margin-top:10px;"><code data-trim contenteditable class='bash' style="float:left;">
+$ pip install trendvis
+							</code></pre>
 						</div>
 
 						<div class="right" style="width: 50%;">
