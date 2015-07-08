@@ -44,7 +44,7 @@
 					<h1>TrendVis</h1>
 					<h3>an elegant interface for dense, sparkline-like, quantitative visualizations of multiple series using matplotlib</h3>
 					<p>
-						<small>Mellissa Cross</a> / <a href="http://github/mscross/trendvis">@mscross</a></small>
+						<small>Mellissa Cross</a> / <a href="https://github/mscross/trendvis">@mscross</a></small>
 					</p>
 				</section>
 
@@ -62,7 +62,7 @@
 					</section>
 					<section>
 						<img src="img/tvproduct.png" alt="fancy" class='stretch'>
-						<h3 class="fragment fade-in">in 24 lines</h3>
+						<h3 class="fragment fade-in">in 21 lines</h3>
 					</section>
 				</section>
 
@@ -134,15 +134,15 @@ tvfig.cleanup_grid()
 				</section>
 
 
-				<!-- Plot data stack -->
+				<!-- Plot data -->
 				<section>
 					<section>
 						<div class="columns">
 							<div class="left" >
 								<h2>Plot</h2>
-								<pre style="margin-top:20%"><code data-trim contenteditable class='ruby'>
+								<pre style="margin-top:15%"><code data-trim contenteditable class='ruby'>
 trendvis.plot_data(tvfig,
-		   [[(sorq_age, sorq, '#008080')],
+                   [[(sorq_age, sorq, '#008080')],
                     [(hu_age, hu, '#00FF00',[0]),
                      (don_age, don, '#00CD00', [0]),
                      (sb_age, sb, 'green', [1])],
@@ -155,9 +155,10 @@ trendvis.plot_data(tvfig,
                     [(ch4_age, ch4, 'orchid')],
                     [(fs_age, fs, 'blue')],
                     [(cob_age, cob, '#00BFFF')]],
-		   marker=None, lw=2,
-		   auto_spinecolor=False)
+                   marker=None, lw=2,
+                   auto_spinecolor=False)
 								</code></pre>
+								<p style="margin-top:15%"><small>All data freely available online through the National Climatic Data Center or as supplementary materials</small></p>
 							</div>
 
 							<div class="right">
@@ -167,8 +168,18 @@ trendvis.plot_data(tvfig,
 					</section>
 
 					<section>
+						<img src="img/wr41agemodel01.png" class='stretch' style="background-color:white;">
+						<p><small>Modified from Cross et al. (in press), Figure 3</small></p>
+					</section>
+				</section>
+
+
+				<!-- Limits stack -->
+				<section>
+					<section>
 						<div class="columns">
 							<div class="left">
+								<h2>Axis Limits</h2>
 								<pre><code data-trim contenteditable class='ruby'>
 tvfig.set_xlim([(0, 5, 24), (1, 123.5, 142.5)])
 								</code></pre>
@@ -200,6 +211,221 @@ tvfig.reverse_yaxis([0, 1, 3])
 				</section>
 
 
+				<!-- Readability stack -->
+				<section>
+					<section>
+						<div class="columns">
+							<div class="left" style="width: 50%;">
+								<h2>Readability</h2>
+								<pre><code data-trim contenteditable class='ruby'>
+tvfig.move_spines(twin_shift=[0.45, 0.45,
+                              -0.2, 0.45])
+								</code></pre>
+							</div>
+
+							<div class="right" style="width: 50%;">
+								<img src="img/moveax.png">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<div class="columns">
+							<div class="left" style="width: 50%;">
+								<pre><code data-trim contenteditable class='ruby'>
+tvfig.autocolor_spines()
+								</code></pre>
+							</div>
+
+							<div class="right" style="width: 50%;">
+								<img src="img/colorax.png">
+							</div>
+						</div>
+					</section>
+
+<!-- 					<section>
+						<div class="columns">
+							<div class="left" style="width: 50%;">
+								<pre><code data-trim contenteditable class='ruby'>
+tvfig.set_axcolor(
+    tvfig.get_axis(3, is_twin=True,
+                   twinstance=1),
+    'red')
+								</code></pre>
+							</div>
+
+							<div class="right" style="width: 50%;">
+								<img src="img/color1ax.png">
+							</div>
+						</div>
+					</section> -->
+				</section>
+
+
+				<!-- Formatting stack -->
+				<section>
+					<section>
+						<div class="columns">
+							<div class="left" style="width: 50%;">
+								<h2>Format</h2>
+								<pre style="margin-top:20%"><code data-trim contenteditable class='ruby'>
+tvfig.set_all_ticknums([(5, 2.5), (5, 2.5)],
+                       [(2, 1), (2, 1),
+                        (40, 20), (2, 1),
+                        (1, 0.5), (2, 1),
+                        (40, 20), (100, 25),
+                        (2, 1), (2, 1)])
+
+tvfig.set_ticks(major_dim=(7,3),minor_dim=(4,2),
+                labelsize=11, pad=6)
+
+tvfig.set_spinewidth(2)
+								</code></pre>
+							</div>
+
+							<div class="right" style="width: 50%;">
+								<img src="img/formatticks.png">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<div class="columns">
+							<div class="left" style="width: 50%;">
+								<pre style="margin-top:20%"><code data-trim contenteditable class='ruby'>
+# Special Characters
+d18o = r'$\delta^{18}\!O$'
+co2label = r'$CO_{2}$'
+ch4label = r'$CH_{4}$'
+vpdb = ' ' + ur'$\u2030$' + ' (VPDB)'
+vsmow = ' ' + ur'$\u2030$' + ' (VSMOW)'
+
+tvfig.fig.suptitle('Age (kyr BP)', y=0.065,
+                   fontsize=16)
+
+tvfig.set_ylabels([d18o + vpdb, d18o + vpdb,
+                   co2label + ' (ppmv)',
+                   d18o + vpdb, d18o + vsmow,
+                   d18o + vpdb, r'$W/m^{2}$',
+                   ch4label + ' (ppmv)', '',
+                   d18o + vpdb, d13c + vpdb],
+                  fontsize=13)
+								</code></pre>
+							</div>
+
+							<div class="right" style="width: 50%;">
+								<img src="img/labels.png">
+							</div>
+						</div>
+					</section>
+				</section>
+
+
+				<!-- Compact -->
+				<section>
+					<div class="columns">
+						<div class="left" style="width: 50%;">
+							<h2>Compact</h2>
+							<pre><code data-trim contenteditable class='ruby'>
+tvfig.fig.subplots_adjust(hspace=-0.4)
+							</code></pre>
+						</div>
+
+						<div class="right" style="width: 50%;">
+							<img src="img/compact.png">
+						</div>
+					</div>
+				</section>
+
+
+				<!-- draw -->
+				<section>
+					<section>
+						<div class="columns">
+							<div class="left" style="width: 50%;">
+							<h2>Draw</h2>
+								<pre><code data-trim contenteditable class='ruby'>
+tvfig.draw_cutout(di=0.075)
+								</code></pre>
+							</div>
+
+							<div class="right" style="width: 50%;">
+								<img src="img/cutout.png">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<div class="columns">
+							<div class="left" style="width: 50%;">
+								<pre style="margin-top:20%"><code data-trim contenteditable class='ruby'>
+ll_ax = tvfig.get_axis(5)
+ur_ax = tvfig.get_axis(0)
+
+tvfig.draw_bar(ll_ax, ur_ax, (11, 12.5),
+              facecolor='g', edgecolor='none',
+              alpha=0.2)
+tvfig.draw_bar(ll_ax, ur_ax, (12.5, 14.5),
+              facecolor='yellow',
+              edgecolor='none', alpha=0.2)
+tvfig.draw_bar(ll_ax, ur_ax, (14.5, 17.5),
+              facecolor='g', edgecolor='none',
+              alpha=0.2)
+
+tvfig.draw_bar(tvfig.axes[5][1],
+               tvfig.axes[0][1],
+              (129.5, 136.5), facecolor='g',
+              edgecolor='none', alpha=0.2)
+								</code></pre>
+							</div>
+
+							<div class="right" style="width: 50%;">
+								<img src="img/barred.png">
+							</div>
+						</div>
+					</section>
+				</section>
+
+
+				<!-- text -->
+				<section>
+					<div class="columns">
+						<div class="left" style="width: 50%;">
+							<h2>Text</h2>
+							<pre><code data-trim contenteditable class='ruby'>
+tvfig.fig.axes[0].text(
+    14, -8.5, 'Termination I', fontsize=14,
+    weight='bold', horizontalalignment='center')
+
+tvfig.fig.axes[1].text(
+    133.23, -8.5, 'Termination II', fontsize=14,
+    weight='bold', horizontalalignment='center')
+							</code></pre>
+						</div>
+
+						<div class="right" style="width: 50%;">
+							<img src="img/labelbarred.png">
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="columns">
+						<div class="left" style="width: 50%;">
+							<h1>TrendVis:</h1>
+							<ul style="margin-top:20%;">
+								<li>Reusable</li>
+								<li>Readable</li>
+								<li>Efficient!</li>
+							</ul>
+							<p style="margin-top:25%;"> and available on GitHub: <a href="https://github/mscross/trendvis">https://github/mscross/trendvis</a></p>
+						</div>
+
+						<div class="right" style="width: 50%;">
+							<img src="img/labelbarred.png">
+						</div>
+					</div>
+				</section>
 
 			</div>
 
