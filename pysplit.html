@@ -15,10 +15,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/umn.css" id="theme">
+		<link rel="stylesheet" href="css/theme/umn_gold.css" id="theme">
 
 		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/tomorrow_night_bright.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -40,11 +40,11 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+				<section style="text-align: left;">
+					<h1>PySPLIT</h1>
+					<h3>a package for the generation, analysis, and visualization of HYSPLIT air parcel trajectories</h3>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>Mellissa Cross</a> / <a href="https://github/mscross/trendvis">@mscross</a></small>
 					</p>
 				</section>
 
@@ -55,93 +55,81 @@
 					</p>
 				</section>
 
-				<!-- Example of nested vertical slides -->
+				<!-- HYSPLIT intro stack -->
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
+						<h2>HYSPLIT</h2>
+						<p>HYbrid Single Particle Lagrangian Transport</p>
 						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<h2>Uses</h2>
+						<p>gov, academic, funsies</p>
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
+						<h2>Acquire</h2>
+						<p>READY or download</p>
 					</section>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
+					<h2>Workflow</h2>
 					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
+						Manually generate, load into Excel, do calculations, plot, cry when asked for changes
 					</p>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
+					<h2>PySPLIT</h2>
 					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
+						dependencies: NumPy, matplotlib, Basemap
+						class-based trajectory data management
 					</p>
 					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+						Don't need to download HYSPLIT, will work with any trajectories
 					</p>
 				</section>
 
 				<section>
-					<h2>Touch Optimized</h2>
+					<h2>Architecture</h2>
 					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
+						5 classes, 4 of which handle trajectories
 					</p>
 				</section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
+				<!-- Generate stack -->
 				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
+					<section>
+						<h2>Generate</h2>
+						<p>Code</p>
+						<p>Reverse trajectories</p>
+						<p>Clip trajectories</p>
 					</section>
 					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
+						<h2>Generate special features</h2>
+						<p>reverse</p>
+						<p>show good and bad trajectory</p>
+					</section>
+					<section>
+						<h2>Generate special features</h2>
+						<p>clip</p>
+						<p>show screen caps of input: stuff it chokes on, clip results</p>
+					</section>
+					<section>
+						<h2>Generation results</h2>
+						<p>screen cap of directories</p>
+						<p>naming convention</p>
+					</section>
+				</section>
+
+
+				<!-- Workflow stack -->
+				<section>
+					<section>
+						<h2>Initialize</h2>
+						<p>initialize trajectory group from files code</p>
+						<p></p>
 					</section>
 				</section>
 
@@ -349,32 +337,6 @@ Reveal.addEventListener( 'customevent', function() {
 					</code></pre>
 				</section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
-
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
-
 			</div>
 
 		</div>
@@ -387,6 +349,8 @@ Reveal.addEventListener( 'customevent', function() {
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				width: 1200,
+				height:800,
 				controls: true,
 				progress: true,
 				history: true,
@@ -407,6 +371,6 @@ Reveal.addEventListener( 'customevent', function() {
 
 		</script>
 		<!-- Official University of MN logo shown globally at bottom left. -->
-		<div style="position:absolute; bottom: 10px; left: 10px; margin-left: 0px; margin-bottom: 0px"><img src="img/umnlogo.png" alt="University of Minnesota" width="286px"></div>
+		<div style="position:absolute; bottom: 10px; left: 10px; margin-left: 0px; margin-bottom: 0px"><img src="img/umn_m.png" alt="University of Minnesota" width="20%"></div>
 	</body>
 </html>
