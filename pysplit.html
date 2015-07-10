@@ -48,78 +48,117 @@
 					</p>
 				</section>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
 
 				<!-- HYSPLIT intro stack -->
 				<section>
-					<section>
+					<section style="text-align: left;">
 						<h2>HYSPLIT</h2>
-						<p>HYbrid Single Particle Lagrangian Transport</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
+						<p>NOAA ARL's HYbrid Single-Particle Lagrangian Integrated Transport model</p>
+						<p style="margin-top:10%;">Two primary simulations:</p>
+						<ul>
+							<li>Concentrations- puff or particle method</li>
+							<li style="color: #ffcc33;">Air parcel trajectories</li>
+						</ul>
+						<p style="margin-top:10%;">What is an air parcel?</p>
 					</section>
+
 					<section>
-						<h2>Uses</h2>
-						<p>gov, academic, funsies</p>
+						<h2 style="text-align: left;">Applications</h2>
+						<img src="img/HYSPLIT_sim_cs.jpg" class="stretch" align="center">
+						<p><small>sos.noaa.gov</small></p>
 					</section>
+
 					<section>
-						<h2>Acquire</h2>
-						<p>READY or download</p>
+						<img src="img/hysplit_traj_fd.gif" class="stretch">
+						<p><small>blogs.agu.org/wildwildscience/2011/03/15/radiation-from-coal-vs-nuclear-plants/</small></p>
+					</section>
+
+					<section>
+						<img src="img/Feng2014.png" class="stretch">
+						<p><small>Feng et al. (2014), Figure 1</small></p>
+					</section>
+
+					<section>
+						<img src="img/Breitenbach2009.png" class="stretch">
+						<p><small>Breitenbach et al. (2009), Figure 5</small></p>
+					</section>
+
+					<section>
+						<div class="columns">
+							<div class="left" style="width: 50%;">
+								<img src="img/Gustafsson2010a.png">
+							</div>
+
+							<div class="right" style="width: 50%; margin-top:5%;">
+								<img src="img/Gustafsson2010b.png">
+							</div>
+						</div>
+						<p><small>Gustafsson et al. (2010), Figures 2 and 5</small></p>
+					</section>
+
+					<section>
+						<h2 style="text-align: left;">Acquisition</h2>
+						<div class="columns">
+							<div class="left" style="width: 50%;">
+								<p style="text-align: center;">online READY system</p>
+								<img src="img/ready.png" style="margin-top:10%">
+								<p style="margin-top:20%"><small><a href="http://ready.arl.noaa.gov/HYSPLIT.php">http://ready.arl.noaa.gov/HYSPLIT.php</a></small></p>
+							</div>
+
+							<div class="right" style="width: 50%;">
+								<p>download to PC or Mac</p>
+								<img src="img/Image10.gif">
+							</div>
+						</div>
 					</section>
 				</section>
 
 				<section>
-					<h2>Workflow</h2>
-					<p>
-						Manually generate, load into Excel, do calculations, plot, cry when asked for changes
-					</p>
+					<h2 style="text-align: left;">Workflow</h2>
+					<div class="columns">
+						<div class="left" style="width: 40%;">
+						<ul style="margin-top:20%;">
+							<li>Generate manually</li>
+							<li>Copy-paste into Excel</li>
+							<li>Do calculations</li>
+							<li>Plot</li>
+							<li>Cross fingers</li>
+						</ul>
+						<p style="margin-top:20%;" >Total active time: <em style="color: #ffcc33;"class="fragment fade-in">3 weeks</em></p>
+						</div>
+
+						<div class="right" style="width: 60%;">
+							<img src="img/JulyMFAvSqr.jpg">
+						</div>
+					</div>
 				</section>
 
-				<section>
+
+				<section style="text-align: left;">
 					<h2>PySPLIT</h2>
 					<p>
-						dependencies: NumPy, matplotlib, Basemap
-						class-based trajectory data management
+						Dependencies: NumPy, matplotlib, Basemap<br>
 					</p>
-					<p>
-						Don't need to download HYSPLIT, will work with any trajectories
-					</p>
+					<ul>
+						<li>Class-based trajectory data management</li>
+						<li>Bulk trajectory generation</li>
+						<li>Attractive visualizations</li>
+						<li>Efficient workflow</li>
+					</ul>
+
 				</section>
 
-				<section>
-					<h2>Architecture</h2>
-					<p>
-						5 classes, 4 of which handle trajectories
-					</p>
-				</section>
-
-
-				<!-- Generate stack -->
+				<!-- architecture stack -->
 				<section>
 					<section>
-						<h2>Generate</h2>
-						<p>Code</p>
-						<p>Reverse trajectories</p>
-						<p>Clip trajectories</p>
+						<h2 style="text-align: left;">Architecture</h2>
+						<img src="img/pysplit_trajectory.png" class="stretch" style="border: 0px;">
 					</section>
 					<section>
-						<h2>Generate special features</h2>
-						<p>reverse</p>
-						<p>show good and bad trajectory</p>
+						<img src="img/pysplit_trajectorygroup.png" class="stretch" style="border: 0px;">
 					</section>
 					<section>
-						<h2>Generate special features</h2>
-						<p>clip</p>
-						<p>show screen caps of input: stuff it chokes on, clip results</p>
-					</section>
-					<section>
-						<h2>Generation results</h2>
-						<p>screen cap of directories</p>
-						<p>naming convention</p>
+						<img src="img/pysplit_clustering.png" class="stretch" style="border: 0px;">
 					</section>
 				</section>
 
@@ -127,216 +166,146 @@
 				<!-- Workflow stack -->
 				<section>
 					<section>
-						<h2>Initialize</h2>
-						<p>initialize trajectory group from files code</p>
-						<p></p>
-					</section>
-				</section>
+						<h2 style="text-align: left;">Workflow</h2>
+						<div class="columns">
+							<div class="left" style="width: 40%;">
+							<ul style="margin-top:20%;">
+								<li>Generate overnight</li>
+								<li>Load</li>
+								<li>Sort and analyze</li>
+								<li>Plot</li>
+								<li>Re-sort, analyze, plot again</li>
+							</ul>
+							<p style="margin-top:20%;" >Total active time: <em style="color: #ffcc33;"class="fragment fade-in"> ... </em></p>
+							</div>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+							<div class="right" style="width: 60%;">
+								<img src="img/Nanjing_seasonal_moistureflux.png">
+							</div>
 						</div>
 					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
+
+					<section>
+						<h2 style="text-align: left;">Generate</h2>
+						<pre style="margin-top:10%"><code data-trim contenteditable class='ruby'>
+import pysplit
+
+pysplit.generate_trajectories(
+    'test_traj', r'C:/hysplit4/working', r'C:/trajectories/test', r'E:/meteorology',
+    [2006, 2007, 2008], [6, 7, 8], [2, 8, 14, 20], [500, 1500], (39.01, -114.22), -120,
+    meteo_type='gdas1', get_reverse=True, get_clippedtraj=True,
+    hysplit="C:\\hysplit4\\exec\\hyts_std")
+						</code></pre>
+					</section>
+
+					<section>
+						<img src="img/integrerror.png" class="stretch">
+					</section>
+
+					<section>
+						<p>For more about clipped trajectories and HYSPLIT clustering with PYSPLIT Cluster and ClusterGroup classes, see the Scipy Proceedings</p>
+						<img src="img/cluster_ex.png">
+					</section>
+
+					<section>
+						<h2 style="text-align: left;">Load</h2>
+						<pre style="margin-top:10%"><code data-trim contenteditable class='ruby'>
+trajgroup = pysplit.make_trajectorygroup(r'C:/trajectories/testsummer*')
+						</code></pre>
+					</section>
+
+					<section>
+						<h2 style="text-align: left;">Analyze</h2>
+						<pre style="margin-top:10%"><code data-trim contenteditable class='ruby'>
+rainy_trajgroup = []
+
+for traj in trajgroup:
+    traj.set_rainstatus()
+
+    if traj.rainstatus:
+        rainy_trajgroup.append(traj)
+
+rainy_oktrajs = []
+
+for traj in trajgroup:
+    traj.load_reversetraj(r'C:/trajectories/reversetraj')
+    traj.integration_error()
+
+    if traj.integ_error_xy < 10:
+        traj.calculate_moistureflux()
+        traj.moistureuptake(-0.2, 0.5, vertical_criterion='prs')
+        rainy_oktrajs.append(traj)
+
+new_group = pysplit.TrajectoryGroup(rainy_oktrajs)
+						</code></pre>
+					</section>
+
+					<section>
+						<div class="columns">
+							<div class="left" style="width: 50%;">
+								<h2>Plot</h2>
+								<pre style="margin-top:5%"><code data-trim contenteditable class='ruby'>
+md = pysplit.MapDesign([40.0, -15.0, 170.0, 60.0],
+    [100.0, 20.0, 30.0, 10.0], projection='cconic',
+    lat_labelspacing=20, lon_labelspacing=40,
+    mapcolor='medium')
+
+datamap = md.make_basemap(figsize=(10,10))
+
+mapbl = rainy_oktrajs.map_data_scatter(
+    datamap,'moistureflux', cnormalize='sqrt')
+
+cax, cbar = pysplit.make_cax_cbar(
+    datamap.ax.get_figure(),
+    [0.2, 0.175, 0.6, 0.03],
+    mapbl,
+    cbar_label='Moisture Flux ((m/s/)(g/kg))')
+
+								</code></pre>
+							</div>
+
+							<div class="right" style="width: 50%;">
+								<img src="img/scatterex.png">
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2 style="text-align: left;">Workflow</h2>
+						<div class="columns">
+							<div class="left" style="width: 40%;">
+							<ul style="margin-top:20%;">
+								<li>Generate overnight</li>
+								<li>Load</li>
+								<li>Sort and analyze</li>
+								<li>Plot</li>
+								<li>Re-sort, analyze, plot again</li>
+							</ul>
+							<p style="margin-top:20%;" >Total active time: <em style="color: #ffcc33; "class="fragment fade-in"> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;one afternoon </em></p>
+							</div>
+
+							<div class="right" style="width: 60%;">
+								<img src="img/Nanjing_seasonal_moistureflux.png">
+							</div>
+						</div>
 					</section>
 				</section>
 
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
 
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
+				<!-- end -->
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+					<div class="columns">
+						<div class="left" style="width: 42%;">
+							<h1>PySPLIT</h1>
+							<p style="margin-top:17.5%;"> Available on GitHub<br><a href="https://github/mscross/pysplit">https://github/mscross/pysplit</a></p>
+							<small><p> Presentation and theme<br><a href="https://github/mscross/reveal.js/tree/scipy2015">https://github/mscross/reveal.js/tree/scipy2015</a><br><br>Scipy 2015 Proceedings<br><br>Thanks to the NOAA ARL for providing the HYSPLIT model</p></small>
+						</div>
 
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+						<div class="right" style="width: 58%;">
+							<img src="img/uptakes.png" style="background: white; margin-top:15%">
+						</div>
+					</div>
 				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
 			</div>
 
 		</div>
