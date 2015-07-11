@@ -217,7 +217,7 @@ trajgroup = pysplit.make_trajectorygroup(r'C:/trajectories/testsummer*')
 					<section>
 						<h2 style="text-align: left;">Analyze</h2>
 						<pre style="margin-top:10%"><code data-trim contenteditable class='ruby'>
-rainy_trajgroup = []
+rainy_traj = []
 
 for traj in trajgroup:
     traj.set_rainstatus()
@@ -227,7 +227,7 @@ for traj in trajgroup:
 
 rainy_oktrajs = []
 
-for traj in trajgroup:
+for traj in rainy_traj:
     traj.load_reversetraj(r'C:/trajectories/reversetraj')
     traj.integration_error()
 
@@ -252,7 +252,7 @@ md = pysplit.MapDesign([40.0, -15.0, 170.0, 60.0],
 
 datamap = md.make_basemap(figsize=(10,10))
 
-mapbl = rainy_oktrajs.map_data_scatter(
+mapbl = new_group.map_data_scatter(
     datamap,'moistureflux', cnormalize='sqrt')
 
 cax, cbar = pysplit.make_cax_cbar(
@@ -291,6 +291,8 @@ cbar.ax.set_xticklabels(['16', '64', '144', '256'])
 							</div>
 						</div>
 					</section>
+
+
 				</section>
 
 
@@ -308,8 +310,20 @@ cbar.ax.set_xticklabels(['16', '64', '144', '256'])
 						</div>
 					</div>
 				</section>
-			</div>
+				<section>
+					<div class="columns">
+						<div class="left" style="width: 42%;">
+							<h1>PySPLIT</h1>
+							<p style="margin-top:17.5%;"> Available on GitHub<br><a href="https://github/mscross/pysplit">https://github/mscross/pysplit</a></p>
+							<small><p> Presentation and theme<br><a href="https://github/mscross/reveal.js/tree/scipy2015">https://github/mscross/reveal.js/tree/scipy2015</a><br><br>Scipy 2015 Proceedings<br><br>Thanks to the NOAA ARL for providing the HYSPLIT model</p></small>
+						</div>
 
+						<div class="right" style="width: 58%;">
+							<img src="img/latslons.png" style="background: white; margin-top:15%">
+						</div>
+					</div>
+				</section>
+			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
