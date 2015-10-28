@@ -40,22 +40,22 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section style="text-align: left;" >
+				<section data-transition="slide" style="text-align: center;">
 					<h1>Great Basin Hydroclimate</h1>
 					<h3>new insights into regional hydroclimate,<br>past and present</h3>
-					<p style="margin-top:10%;color: #7a0019;">
-						Mellissa Cross
-					</p>
-					<p style="margin-top:5%;"><small>R. Lawrence Edwards</small></p>
-					<p style="margin-top:2%;"><small>January 22, 2016</small></p>
+					<p style="margin-top:3.5%;"><small>a doctoral defense</small></p>
+					<p style="margin-top:6%;color: #7a0019;">Mellissa Cross</p>
+					<p style="margin-top:7%;"><small>Department of Earth Sciences</small></p>
+					<p style="margin-top:-2%;"><small>R. Lawrence Edwards</small></p>
+					<p style="margin-top:-2%;"><small>January 22, 2016</small></p>
 				</section>
-				<section style="text-align: left;">
-					<h2>About</h2>
-					<img src="img/JDW_8225.jpg", class="stretch">
-					<p><small>so cave much light very wow</small></p>
 
+				<section data-transition="slide">
+					<h2 style="text-align: left;">About</h2>
+					<img src="img/cave_cutout.png", class="stretch" align="center">
+					<p><small>so cave much light very wow</small></p>
 				</section>
-				<section style="text-align: left;">
+				<section style="text-align: left;" data-transition="slide">
 					<h2>Acknowledgments</h2>
 					<ul>
 						<li>person</li>
@@ -63,6 +63,35 @@
 						<li>still more people</li>
 						<li>?</li>
 					</ul>
+				</section>
+				<section data-transition="slide">
+					<section>
+						<h2 style="text-align: left;">Speleothem Growth</h2>
+						<img src="img/wr41_3d_6.png" class="stretch" align="center">
+					</section>
+					<section>
+						<h2 style="text-align: left;">Speleothem Growth</h2>
+						<img src="img/wr41_3d_5.png" class="stretch" align="center">
+					</section>
+					<section>
+						<h2 style="text-align: left;">Speleothem Growth</h2>
+						<img src="img/wr41_3d_4.png" class="stretch" align="center">
+					</section>
+					<section>
+						<h2 style="text-align: left;">Speleothem Growth</h2>
+						<img src="img/wr41_3d_3.png" class="stretch" align="center">
+					</section>
+					<section>
+						<h2 style="text-align: left;">Speleothem Growth</h2>
+						<img src="img/wr41_3d_2.png" class="stretch" align="center">
+					</section>
+					<section>
+						<h2 style="text-align: left;">Speleothem Growth</h2>
+						<img src="img/wr41_3d_1slabbed.png" class="stretch" align="center">
+					</section>
+				</section>
+				<section>
+					<h2>Test</h2>
 				</section>
 			</div>
 		</div>
@@ -82,7 +111,7 @@
 				center: true,
 				slideNumber: true,
 				margin: 0.1,
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'none', // none/fade/slide/convex/concave/zoom
 				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
